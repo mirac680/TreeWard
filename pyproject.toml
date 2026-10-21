@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "treeward"
+version = "0.1.0"
+description = "A private, local-first preflight check before publishing a repository."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "TreeWard contributors" }]
+keywords = ["github", "security", "secrets", "repository", "cli", "preflight"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Security",
+  "Topic :: Software Development :: Version Control",
+]
+
+[project.scripts]
+treeward = "treeward.cli:main"
+
+[tool.setuptools]
+packages = ["treeward"]
